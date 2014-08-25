@@ -1,0 +1,14 @@
+<h2>Backbone.js Model Extras</h2>
+
+<p class="fragment">Parsing data from forms/DOM can muck up data "types" and cause unnecessary model changes.</p>
+
+<p class="fragment">Our solution was to add a schema wrapper to Backbone.Model.</p>
+
+<pre class="fragment"><code class="javascript">var AddressModel = Backbone.Model.extend({
+  schema: {
+    addressId: 'int',
+    customerId: 'int',
+    countryId: 'int',
+    addressTypeId: 'int'
+  }
+});</code></pre>

@@ -1,0 +1,10 @@
+<h2>Backbone.js PubSub</h2>
+
+<p class="fragment">As mentioned before we use a simple <code>pubsub</code> pattern for module communication.</p>
+
+<p class="fragment">In <code>base.js</code> we have this really ugly but effective extension of Backbone.Events on top of model, view and collection.</p>
+
+<pre class="fragment"><code class="javascript">Backbone.Collection.prototype.pubSub =
+  Backbone.View.prototype.pubSub =
+  Backbone.Model.prototype.pubSub = _.extend({}, Backbone.Events);
+</code></pre>

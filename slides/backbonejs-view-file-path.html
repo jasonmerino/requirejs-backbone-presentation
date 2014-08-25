@@ -1,0 +1,9 @@
+<h2>Backbone.js View File Path</h2>
+
+<p class="fragment"><code>this.path</code> in controller specifies both the template path AND the Backbone view path.</p>
+
+<pre class="fragment"><code class="javascript">HomeController.index = function() {
+  this.path = 'pages/home/index';
+  this.render(this.path, {});
+};
+</code></pre>

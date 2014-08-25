@@ -1,0 +1,14 @@
+<h2>Backbone.js Model Example</h2>
+
+<p class="fragment">We make pretty heavy use of the models REST capabilities and data helpers.</p>
+
+<pre class="fragment"><code class="javascript">var AddressModel = Backbone.Model.extend({
+  urlRoot: '/api/account/address',
+
+  getType: function() {
+    return this.get('addressTypeId') === 2 ?
+      'shipping' :
+      'billing';
+  }
+
+});</code></pre>

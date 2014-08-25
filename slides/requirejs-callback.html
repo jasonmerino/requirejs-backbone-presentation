@@ -1,0 +1,16 @@
+<h2>RequireJS Callback</h2>
+<br>
+
+<p>The callback function is executed once all the modules dependencies are fetched.</p>
+
+<br>
+
+<div class="fragment">
+
+<p>Which allows us to do things like this.</p>
+
+<pre><code class="javascript">define(['one', 'two', 'three'], function(one, two, three) {
+  one.doSomething(two.getValue(), three.renderStuff);
+});</code></pre>
+
+</div>

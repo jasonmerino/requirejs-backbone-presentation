@@ -1,0 +1,14 @@
+<h2>RequireJS Page Specific Resources</h2>
+<br>
+<p class="fragment">From inside <code>base.js</code> we require the page specific resources.</p>
+<br>
+<div class="fragment">
+
+<pre><code class="javascript">if (window.BCOM && window.BCOM.requireViewPath) {
+	require([window.BCOM.requireViewPath], function(pageView) {
+		if (pageView !== undefined) {
+			new pageView();
+		}
+	});
+}</code></pre>
+</div>

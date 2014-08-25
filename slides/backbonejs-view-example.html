@@ -1,0 +1,17 @@
+<h2>Backbone.js View Example</h2>
+
+<p class="fragment">Initialize, Events, and jQuery selectors are things we use pretty heavily.</p>
+
+<pre class="fragment"><code class="javascript">var Backbone.View.extend({
+  initialize: function() {
+    // setup view here
+  },
+
+  events: {
+    'click button': 'doSomething'
+  },
+
+  doSomething: function() {
+    this.$('.select-me').addClass('loading');
+  }
+});</code></pre>

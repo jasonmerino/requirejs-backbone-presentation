@@ -1,0 +1,19 @@
+<h2>Backbone.js Model REST Usage</h2>
+
+<pre class="fragment"><code class="javascript">var AddressModel Backbone.Model.extend({
+  idAttribute: 'addressId',
+  urlRoot: '/themes/build-tablet/api/account/address',
+  getType: function() {
+    return this.get('addressTypeId') === 2 ?
+      'shipping' :
+      'billing';
+  }
+
+});</code></pre>
+
+<pre class="fragment"><code class="javascript">var view = new Backbone.View.extend({
+  model: new AddressModel({
+    // address data
+  }),
+});
+view.model.fetch();</code></pre>

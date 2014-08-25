@@ -1,0 +1,13 @@
+<h2>Backbone.js Collections</h2>
+
+<p class="fragment">Collections contain a lot of the nice functionality of models with some extra helpers for groups of data.</p>
+
+<p class="fragment">We mostly use collections to add our own helpers to so we can better conceptualize the data.</p>
+
+<pre class="fragment"><code class="javascript">var FinishesCollection = Backbone.Collection.extend({
+  getSelectedFinish: function() {
+    return this.findWhere({
+      selected: true
+    }) || false;
+  }
+});</code></pre>

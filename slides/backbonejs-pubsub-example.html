@@ -1,0 +1,21 @@
+<h2>Backbone.js Pubsub Example</h2>
+
+<div class="fragment">
+
+<p>And it functions something like:</p>
+
+<pre><code class="javascript">var ViewOne = Backbone.View.extend({
+  fnOne: function() {
+    this.pubSub.trigger('event:name', {});
+  }
+});</code></pre>
+
+<pre><code class="javascript">var ViewTwo = Backbone.View.extend({
+  initialize: function() {
+    this.listenTo(this.pubSub, 'event:name', doSomething);
+  },
+  doSomething: function(data) {
+    // do something with data
+  }
+});</code></pre>
+</div>
