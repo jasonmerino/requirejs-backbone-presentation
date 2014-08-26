@@ -5,3 +5,4 @@ dist
 *.log
 .sass-cache
 index.html
+!slides/index.html
